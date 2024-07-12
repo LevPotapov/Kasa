@@ -1,0 +1,42 @@
+header {
+  padding-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  margin: auto 0;
+  width: 309px;
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  a {
+    width: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: right;
+    vertical-align: bottom;
+    color: black;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media (width <= 576px) {
+  header {
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 0;
+    a {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+footer {
+  background-color: black;
+  color: white;
+  height: 209px;
+
+  img {
+    margin-top: 66px;
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 35px;
+  }
+}
+
+@media (width <= 576px) {
+  footer {
+    p {
+      font-size: 12px;
+      margin: 5px auto;
+      max-width: 120px;
+    }
+  }
+}

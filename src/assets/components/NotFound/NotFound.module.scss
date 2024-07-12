@@ -1,0 +1,42 @@
+.notFoundTitle {
+  font-size: 300px;
+  color: #ff6060;
+  margin-top: 80px;
+}
+
+.notFoundParagraph {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ff6060;
+  margin-top: 95px;
+}
+
+.notFoundLink {
+  margin-top: 145px;
+  margin-bottom: 140px;
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+  }
+}
+
+@media (width <= 576px) {
+  .notFoundTitle {
+    font-size: 100px;
+    margin-top: 100px;
+  }
+
+  .notFoundParagraph {
+    font-size: 18px;
+    margin-top: 105px;
+  }
+
+  .notFoundLink {
+    margin-top: 120px;
+    margin-bottom: 115px;
+    a {
+      font-size: 14px;
+    }
+  }
+}
