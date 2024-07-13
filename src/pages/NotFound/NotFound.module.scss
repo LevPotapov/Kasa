@@ -1,0 +1,19 @@
+.notFoundLink {
+  margin-top: 145px;
+  margin-bottom: 140px;
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+  }
+}
+
+@media (width <= 576px) {
+  .notFoundLink {
+    margin-top: 120px;
+    margin-bottom: 115px;
+    a {
+      font-size: 14px;
+    }
+  }
+}

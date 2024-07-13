@@ -1,9 +1,10 @@
 import styles from "./Banner.module.scss";
 
-const Banner = ({ src, text = "" }) => {
+const Banner = ({ image, text = "" }) => {
+  const src = "./src/assets/images/";
   return (
     <div
-      style={{ backgroundImage: `url(${src})` }}
+      style={{ backgroundImage: `url(${src}${image}.png)` }}
       className={text ? styles.withText : styles.withoutText}
     >
       {text && <h1 className={styles.textOverlay}>{text}</h1>}

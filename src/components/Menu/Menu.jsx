@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Menu.module.scss";
-import { useResize } from "../../utils/useResize";
+import { useResize } from "../../hooks/useResize";
 
 const Menu = () => {
   const location = useLocation();
@@ -8,8 +8,8 @@ const Menu = () => {
   const isMobileScreen = useResize(576);
 
   const src = isMobileScreen
-    ? "./src/assets/images/logos/LOGO_mobile_orange.svg"
-    : "./src/assets/images/logos/LOGO_desktop_orange.svg";
+    ? "./src/assets/logos/LOGO_mobile_orange.svg"
+    : "./src/assets/logos/LOGO_desktop_orange.svg";
 
   return (
     <header>

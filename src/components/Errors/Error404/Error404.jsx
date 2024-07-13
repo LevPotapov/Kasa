@@ -1,8 +1,7 @@
-import { NavLink } from "react-router-dom";
-import { useResize } from "../../utils/useResize";
-import styles from "./NotFound.module.scss";
+import { useResize } from "../../../hooks/useResize";
+import styles from "./Error404.module.scss";
 
-const NotFound = () => {
+const Error404 = () => {
   const isMobileScreen = useResize(576);
 
   return (
@@ -19,11 +18,8 @@ const NotFound = () => {
           Oups!La page que vous demandez n&apos;existe pas.
         </p>
       )}
-      <div className={styles.notFoundLink}>
-        <NavLink>Retourner sur la page d&apos;accueil</NavLink>
-      </div>
     </>
   );
 };
 
-export { NotFound };
+export { Error404 };

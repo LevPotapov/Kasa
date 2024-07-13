@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Layout } from "./assets/components/Layout/Layout";
-import { Home } from "./assets/components/Home/Home";
-import { Housing } from "./assets/components/Housing/Housing";
-import { About } from "./assets/components/About/About";
-import { NotFound } from "./assets/components/NotFound/NotFound";
+import { Layout } from "./components/Layout/Layout";
+import { Home } from "./pages/Home/Home";
+import { Housing } from "./pages/Housing/Housing";
+import { About } from "./pages/About/About";
+import { NotFound } from "./pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
