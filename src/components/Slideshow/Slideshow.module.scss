@@ -1,0 +1,83 @@
+.mainContainer {
+  position: relative;
+  height: 415px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.allPagesContainer {
+  height: 100%;
+  display: flex;
+  transition: translate;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+.arrowLeft,
+.arrowRight {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  top: 160px;
+  height: 79px;
+}
+
+.arrowLeft {
+  left: 25px;
+}
+
+.arrowRight {
+  right: 25px;
+}
+
+.page {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  span {
+    position: absolute;
+    bottom: 25px;
+  }
+}
+
+@media (width <= 576px) {
+  .mainContainer {
+    height: 255px;
+  }
+
+  .window {
+    border-radius: 10px;
+  }
+
+  .page {
+    span {
+      display: none;
+    }
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    height: 20px;
+    top: 120px;
+  }
+
+  .arrowLeft {
+    left: 5px;
+  }
+
+  .arrowRight {
+    right: 5px;
+  }
+}

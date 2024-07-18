@@ -2,6 +2,7 @@ import housings from "../../data/housings.json";
 import { Banner } from "../../components/Banner/Banner";
 import { Card } from "../../components/Card/Card";
 import styles from "./Home.module.scss";
+import { Slideshow } from "../../components/Slideshow/Slideshow";
 
 const Home = () => {
   const housingList = JSON.parse(JSON.stringify(housings));
