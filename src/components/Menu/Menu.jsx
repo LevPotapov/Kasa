@@ -22,7 +22,7 @@ const Menu = () => {
           Accueil
         </NavLink>
         <NavLink
-          className={location.pathname === "/about" ? styles.underline : ""}
+          className={location.pathname === "./about" ? styles.underline : ""}
           to="/about"
         >
           A Propos

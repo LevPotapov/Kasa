@@ -27,10 +27,10 @@ const Collapse = ({ title, text }) => {
           <span>{text}</span>
         ) : (
           text.map((el, idx) => (
-            <div key={idx}>
+            <span key={idx}>
               <span>{el}</span>
               <br />
-            </div>
+            </span>
           ))
         )}
       </p>

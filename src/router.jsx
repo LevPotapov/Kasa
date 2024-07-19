@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "housing",
+        path: ":housing",
         element: <Housing />,
       },
       {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "*",
+        path: "error",
         element: <NotFound />,
       },
     ],

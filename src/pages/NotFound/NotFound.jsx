@@ -7,7 +7,7 @@ const NotFound = () => {
     <>
       <Error404 />
       <div className={styles.notFoundLink}>
-        <NavLink>Retourner sur la page d&apos;accueil</NavLink>
+        <NavLink to="/">Retourner sur la page d&apos;accueil</NavLink>
       </div>
     </>
   );
