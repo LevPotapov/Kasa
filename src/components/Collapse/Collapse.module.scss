@@ -1,3 +1,7 @@
+.collapseContainer {
+  width: 100%;
+}
+
 .title {
   background-color: #ff6060;
   color: white;
@@ -31,7 +35,19 @@
 .activeText {
   padding: 20px;
   height: auto;
+  min-height: 184px;
   span {
     display: inline;
+  }
+  div {
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media (width <= 576px) {
+  .activeText {
+    min-height: 120px;
   }
 }

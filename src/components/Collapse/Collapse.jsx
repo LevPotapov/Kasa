@@ -7,7 +7,7 @@ const Collapse = ({ title, text }) => {
   const isMobileScreen = useResize(576);
 
   return (
-    <div>
+    <div className={styles.collapseContainer}>
       <div className={styles.title}>
         <p>{title}</p>
         <img
@@ -23,7 +23,16 @@ const Collapse = ({ title, text }) => {
       <p
         className={isOpen ? `${styles.text} ${styles.activeText}` : styles.text}
       >
-        <span>{text}</span>
+        {typeof text === "string" ? (
+          <span>{text}</span>
+        ) : (
+          text.map((el, idx) => (
+            <div key={idx}>
+              <span>{el}</span>
+              <br />
+            </div>
+          ))
+        )}
       </p>
     </div>
   );

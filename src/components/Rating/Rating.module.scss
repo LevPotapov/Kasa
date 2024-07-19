@@ -1,0 +1,22 @@
+.star {
+  height: 24px;
+  width: 24.75px;
+  margin-left: 16px;
+}
+
+.starsContainer {
+  text-align: right;
+}
+
+@media (width <= 576px) {
+  .star {
+    height: 13px;
+    width: 13.41px;
+    margin-left: 0px;
+    margin-right: 7px;
+  }
+
+  .starsContainer {
+    text-align: left;
+  }
+}
