@@ -2,6 +2,16 @@ import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Menu.module.scss";
 import { useResize } from "../../hooks/useResize";
 
+/**
+ * Menu component to display the navigation menu with a logo.
+ *
+ * @component
+ * @example
+ * return <Menu />;
+ *
+ * @returns {JSX.Element} Menu component.
+ */
+
 const Menu = () => {
   const location = useLocation();
 
@@ -22,7 +32,7 @@ const Menu = () => {
           Accueil
         </NavLink>
         <NavLink
-          className={location.pathname === "./about" ? styles.underline : ""}
+          className={location.pathname === "/about" ? styles.underline : ""}
           to="/about"
         >
           A Propos

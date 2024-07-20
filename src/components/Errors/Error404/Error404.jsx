@@ -1,6 +1,16 @@
 import { useResize } from "../../../hooks/useResize";
 import styles from "./Error404.module.scss";
 
+/**
+ * Error404 component to display a 404 error message.
+ *
+ * @component
+ * @example
+ * return <Error404 />;
+ *
+ * @returns {JSX.Element} Error404 component.
+ */
+
 const Error404 = () => {
   const isMobileScreen = useResize(576);
 

@@ -1,8 +1,23 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import styles from "./Slideshow.module.scss";
 import { useEffect, useRef } from "react";
 
 const TRANSITION_DURATION = 250;
+
+/**
+ * Slideshow component displaying images in a loop with the ability to switch between them.
+ *
+ * @component
+ * @example
+ * const pictures = ["image1.jpg", "image2.jpg", "image3.jpg"];
+ * return <Slideshow pictures={pictures} />;
+ *
+ * @param {Object} props - Component properties.
+ * @param {string[]} props.pictures - Array of image URLs.
+ *
+ * @returns {JSX.Element} Slideshow component.
+ */
 
 const Slideshow = ({ pictures }) => {
   const [pages, setPages] = useState([]);
@@ -12,6 +27,14 @@ const Slideshow = ({ pictures }) => {
     useState(TRANSITION_DURATION);
 
   const windowElRef = useRef();
+
+  /**
+   * Hook for creating an array of slideshow pages.
+   *
+   * Creates an array of pages, each representing an image from the `pictures` array.
+   * Adds duplicates of the first and last image at the beginning and end of the array to create a cyclical animation.
+   *
+   */
 
   useEffect(() => {
     let i = 1;
@@ -64,6 +87,13 @@ const Slideshow = ({ pictures }) => {
     return;
   }, [pictures]);
 
+  /**
+   * Hook for handling window resize.
+   *
+   * Updates the slide width (`width`) and offset (`offset`) when the window is resized.
+   *
+   */
+
   useEffect(() => {
     const resizeHandler = () => {
       const _width = windowElRef.current.offsetWidth;
@@ -80,6 +110,14 @@ const Slideshow = ({ pictures }) => {
     };
   }, [width]);
 
+  /**
+   * Hook for managing transitions (animations).
+   *
+   * Sets the value of `transitionDuration` to `TRANSITION_DURATION`
+   * after it has been set to 0.
+   *
+   */
+
   useEffect(() => {
     if (transitionDuration === 0) {
       setTimeout(() => {
@@ -87,6 +125,13 @@ const Slideshow = ({ pictures }) => {
       }, TRANSITION_DURATION);
     }
   }, [transitionDuration]);
+
+  /**
+   * Hook for managing slide positions.
+   *
+   * Moves slides to the beginning or end when they reach the end.
+   *
+   */
 
   useEffect(() => {
     if (offset == 0) {
@@ -106,12 +151,22 @@ const Slideshow = ({ pictures }) => {
     }
   }, [offset, width, pictures.length]);
 
+  /**
+   * Left arrow click event handler.
+   *
+   */
+
   const handleLeftArrowClick = () => {
     setOffset((currentOffset) => {
       const newOffset = currentOffset + width;
       return Math.min(newOffset, 0);
     });
   };
+
+  /**
+   * Right arrow click event handler.
+   *
+   */
 
   const handleRightArrowClick = () => {
     setOffset((currentOffset) => {
@@ -162,6 +217,10 @@ const Slideshow = ({ pictures }) => {
       </div>
     </div>
   );
+};
+
+Slideshow.propTypes = {
+  pictures: PropTypes.array.isRequired,
 };
 
 export { Slideshow };

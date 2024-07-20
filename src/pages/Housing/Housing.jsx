@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { Host } from "../../components/Host/Host";
 import { Rating } from "../../components/Rating/Rating";
 import { Slideshow } from "../../components/Slideshow/Slideshow";
@@ -6,7 +7,16 @@ import { Collapse } from "../../components/Collapse/Collapse";
 import { Tag } from "../../components/Tag/Tag";
 import housings from "../../data/housings.json";
 import styles from "./Housing.module.scss";
-import { useEffect } from "react";
+
+/**
+ * Housing page displaying a slideshow, housing information, host, rating, and other details.
+ *
+ * @component
+ * @example
+ * return <Housing />;
+ *
+ * @returns {JSX.Element} Housing page.
+ */
 
 const Housing = () => {
   const housingsList = JSON.parse(JSON.stringify(housings));
@@ -17,7 +27,7 @@ const Housing = () => {
 
   useEffect(() => {
     if (!housing) {
-      navigate("/error", { relative: "patch" });
+      navigate("../error", { relative: "path" });
     }
   }, [housing, navigate]);
 
@@ -39,7 +49,7 @@ const Housing = () => {
           </div>
           <div className={styles.hostRatingContainer}>
             <Host host={housing.host} />
-            <Rating rating={housing.rating} />
+            <Rating rating={+housing.rating} />
           </div>
         </div>
         <div className={styles.collapseContainer}>

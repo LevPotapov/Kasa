@@ -53,7 +53,8 @@
       }
     }
     p {
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 25px;
     }
   }
 }
@@ -97,9 +98,6 @@
     gap: 25px;
 
     > div {
-      p {
-        font-size: 11px;
-      }
       > div {
         padding: 5px 10px 5px 10px;
         font-size: 13px;
@@ -108,6 +106,10 @@
         p {
           font-size: 13px;
         }
+      }
+      p {
+        font-size: 11px;
+        line-height: 18px;
       }
     }
   }

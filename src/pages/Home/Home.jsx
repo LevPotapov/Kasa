@@ -4,6 +4,16 @@ import { Card } from "../../components/Card/Card";
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 
+/**
+ * Home page displaying a banner and a gallery of cards using Card and Banner components.
+ *
+ * @component
+ * @example
+ * return <Home />;
+ *
+ * @returns {JSX.Element} Home page.
+ */
+
 const Home = () => {
   const housingList = JSON.parse(JSON.stringify(housings));
 
