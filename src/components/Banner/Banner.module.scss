@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   border-radius: 25px;
-  margin-top: 50px;
 }
 
 .withoutText {
@@ -35,7 +34,13 @@
   text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000;
 }
 
-@media (width <= 576px) {
+@media (width <= 900px) {
+  .textOverlay {
+    font-size: 36px;
+  }
+}
+
+@media (width <= 600px) {
   .withText,
   .withoutText {
     @extend %imageBox;
@@ -51,6 +56,7 @@
   .textOverlay {
     font-size: 24px;
     text-align: left;
+    line-height: 1;
     padding: 31px 90px 0 16px;
     border-radius: 10px;
     text-shadow: none;

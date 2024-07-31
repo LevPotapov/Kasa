@@ -19,13 +19,13 @@ const Error404 = () => {
       <h1 className={styles.notFoundTitle}>404</h1>
       {isMobileScreen ? (
         <p className={styles.notFoundParagraph}>
-          Oups!La page que
+          Oups! La page que
           <br />
           vous demandez n&apos;existe pas.
         </p>
       ) : (
         <p className={styles.notFoundParagraph}>
-          Oups!La page que vous demandez n&apos;existe pas.
+          Oups! La page que vous demandez n&apos;existe pas.
         </p>
       )}
     </>

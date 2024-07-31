@@ -19,7 +19,9 @@ const Home = () => {
 
   return (
     <>
-      <Banner image="home_banner" text="Chez vous, partout et ailleurs" />
+      <div className={styles.bannerContainer}>
+        <Banner image="home_banner" text="Chez vous, partout et ailleurs" />
+      </div>
       <div className={styles.gallery}>
         {housingList.map((el) => {
           return (

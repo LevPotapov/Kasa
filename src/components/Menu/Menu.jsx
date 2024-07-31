@@ -15,7 +15,7 @@ import { useResize } from "../../hooks/useResize";
 const Menu = () => {
   const location = useLocation();
 
-  const isMobileScreen = useResize(576);
+  const isMobileScreen = useResize(700);
 
   const src = isMobileScreen
     ? "./src/assets/logos/LOGO_mobile_orange.svg"

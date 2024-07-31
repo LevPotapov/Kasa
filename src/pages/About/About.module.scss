@@ -1,27 +1,50 @@
 .container {
-  margin: 0 80px 0 80px;
+  margin: 40px 110px 40px 110px;
   font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 33px;
 
   span {
     font-size: 18px;
   }
 }
 
-.items {
-  margin: 40px;
+.bannerContainer {
+  margin-top: 32px;
 }
 
-@media (width <= 576px) {
+@media (width <= 1050px) {
   .container {
-    margin: 0;
-    font-size: 13px;
+    margin: 40px 0 40px 0;
+  }
+}
+@media (width <= 610px) {
+  .bannerContainer {
+    margin-top: 20px;
+  }
+
+  .container {
+    margin: 20px 0 20px 0;
+    gap: 22px;
 
     span {
       font-size: 11px;
     }
-  }
 
-  .items {
-    margin: 20px 0 20px 0;
+    > div {
+      > div {
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+
+        p {
+          font-size: 13px;
+        }
+      }
+      p {
+        line-height: 18px;
+      }
+    }
   }
 }

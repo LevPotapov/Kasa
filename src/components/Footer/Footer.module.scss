@@ -10,15 +10,17 @@ footer {
   p {
     font-size: 24px;
     font-weight: 500;
-    margin-top: 35px;
+    margin-top: 38px;
+    letter-spacing: 0.5px;
   }
 }
 
-@media (width <= 576px) {
+@media (width <= 610px) {
   footer {
     p {
       font-size: 12px;
-      margin: 5px auto;
+      line-height: 1.4;
+      margin: 7px auto;
       max-width: 120px;
     }
   }

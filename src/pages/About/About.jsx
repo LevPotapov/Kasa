@@ -16,12 +16,12 @@ import styles from "./About.module.scss";
 const About = () => {
   return (
     <>
-      <Banner image="about_banner" />
+      <div className={styles.bannerContainer}>
+        <Banner image="about_banner" />
+      </div>
       <div className={styles.container}>
         {aboutList.map((el, idx) => (
-          <div key={idx} className={styles.items}>
-            <Collapse text={el.content} title={el.title} />
-          </div>
+          <Collapse key={idx} text={el.content} title={el.title} />
         ))}
       </div>
     </>
